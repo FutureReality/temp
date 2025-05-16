@@ -11,6 +11,7 @@ BEGIN
   JOIN Usuarios u ON c.id_usuario = u.id_usuario
   WHERE c.id_cliente = NEW.id_cliente;
 
+
   INSERT INTO pending_emails (email, subject, message, sent)
   VALUES (
     cliente_email,
