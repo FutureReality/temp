@@ -20,7 +20,7 @@ Título: $subject
 
 Mensaje: $message"
 
-    # Enviar correo con remitente "Helpdesk"
+
     echo -e "From: Helpdesk <$SMTP_FROM>\nTo: $email\nSubject: $mail_subject\n\n$mail_body" | /usr/sbin/sendmail -t
 
     if [ $? -eq 0 ]; then
